@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    max-width: 90vw;
+    padding: 2rem 6rem;
+    margin: 0 auto;
+    max-height: 100vh;
+    
+}
+.header{
+    width: 40vw;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom:2.8rem;
+}
+.head-title{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.head-desc{
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.section{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 1.5rem;
+}
+@media (min-width:650px){
+    .section{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (min-width:1050px){
+    .section{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (min-width:1250px){
+    .section{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+.section_card{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid grey;
+    border-radius: 4px;
+}
+.sect_img{
+    position: relative;
+    overflow: hidden;
+    height: 14rem;
+}
+.sect_img img{
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+.sect_img img:hover{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+
+}
+
+.sect-para{
+    padding: 1rem;
+}
+.sect-para h4{
+    font-size: small;
+    margin-bottom: 0.5rem;
+}
+.sect-para p{
+    font-size: 0.8rem;
+    color: rgb(118, 112, 112);
+}
+
+.sect-footer{
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sect-foot-profile{
+    display: flex;
+    height: 2rem;
+}
+.sect_foot_profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.sec_foot_img{
+    display: flex;
+    border-radius: 50%;
+    border: 1px solid lightgrey;
+    overflow: hidden;
+    margin-right: 0.3rem;
+
+}
+.sect_foot_profile span:nth-child(n){
+    font-size: 0.9rem;
+    color: rgb(81, 81, 157);
+    font-weight: 600;
+}
+.sect_foot_profile span:nth-child(2n){
+    font-size: 13px;
+    color: grey;
+}
